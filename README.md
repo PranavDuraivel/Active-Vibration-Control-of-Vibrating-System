@@ -162,14 +162,6 @@ System excited with 10 Hz sine wave.
 
 ---
 
-## 📚 References
-
-- Dr Jordan Cheer – Lab Manual & Lectures  
-- Fuller, C.R., Elliott, S.J., Nelson, P.A.  
-  *Active Control of Vibration*, Academic Press, 1997
-  
----
-
 ## 🧮 Modified State-Space Representation
 
 When applying feedback control, the control force \( F_s(t) \) is defined based on the feedback type:
