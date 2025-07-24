@@ -20,11 +20,11 @@ m\ddot{x}(t) + c\dot{x}(t) + kx(t) = F_p(t) + F_s(t)
 
 Where:
 
-- \( m = 5 \, \text{kg} \)
-- \( c = 20 \, \text{Ns/m} \)
-- \( k = 2.2 \times 10^6 \, \text{N/m} \)
-- \( F_p(t) \) = primary input force
-- \( F_s(t) \) = secondary control force
+- m=5kg
+- c=20Ns/m
+- k=2.2×106 N/m
+- Fp(t) = primary input force
+- Fs(t) = secondary control force
 
 ---
 
@@ -165,4 +165,212 @@ System excited with 10 Hz sine wave.
 
 - Dr Jordan Cheer – Lab Manual & Lectures  
 - Fuller, C.R., Elliott, S.J., Nelson, P.A.  
-  *Active Control of Vibration*, Academic Press, 1997  
+  *Active Control of Vibration*, Academic Press, 1997
+  
+---
+
+## 🧮 Modified State-Space Representation
+
+When applying feedback control, the control force \( F_s(t) \) is defined based on the feedback type:
+
+### ▶️ 1. Displacement Feedback
+
+Let:
+
+```math
+F_s(t) = -g_d x(t)
+```
+
+Substituting into the original equation of motion:
+
+```math
+m\ddot{x}(t) + c\dot{x}(t) + kx(t) = F_p(t) + F_s(t) = F_p(t) - g_d x(t)
+```
+
+Rewriting:
+
+```math
+m\ddot{x}(t) + c\dot{x}(t) + (k + g_d)x(t) = F_p(t)
+```
+
+Divide through by \( m \):
+
+```math
+\ddot{x}(t) = -\frac{c}{m} \dot{x}(t) - \left(\frac{k + g_d}{m}\right) x(t) + \frac{1}{m} F_p(t)
+```
+
+Define state variables:
+
+```math
+z_1(t) = x(t), \quad z_2(t) = \dot{x}(t)
+```
+
+State-space representation:
+
+```math
+\begin{bmatrix}
+\dot{z}_1(t) \\
+\dot{z}_2(t)
+\end{bmatrix}
+=
+\begin{bmatrix}
+0 & 1 \\
+-\left(\frac{k + g_d}{m}\right) & -\left(\frac{c}{m}\right)
+\end{bmatrix}
+\begin{bmatrix}
+z_1(t) \\
+z_2(t)
+\end{bmatrix}
++
+\begin{bmatrix}
+0 \\
+\frac{1}{m}
+\end{bmatrix}
+F_p(t)
+```
+
+---
+
+### ▶️ 2. Velocity Feedback
+
+Let:
+
+```math
+F_s(t) = -g_v \dot{x}(t)
+```
+
+Substitute into the original system:
+
+```math
+m\ddot{x}(t) + c\dot{x}(t) + kx(t) = F_p(t) - g_v \dot{x}(t)
+```
+
+Combine damping terms:
+
+```math
+m\ddot{x}(t) + (c + g_v)\dot{x}(t) + kx(t) = F_p(t)
+```
+
+Divide by \( m \):
+
+```math
+\ddot{x}(t) = -\left(\frac{c + g_v}{m}\right) \dot{x}(t) - \frac{k}{m} x(t) + \frac{1}{m} F_p(t)
+```
+
+State-space:
+
+```math
+\begin{bmatrix}
+\dot{z}_1(t) \\
+\dot{z}_2(t)
+\end{bmatrix}
+=
+\begin{bmatrix}
+0 & 1 \\
+-\left(\frac{k}{m}\right) & -\left(\frac{c + g_v}{m}\right)
+\end{bmatrix}
+\begin{bmatrix}
+z_1(t) \\
+z_2(t)
+\end{bmatrix}
++
+\begin{bmatrix}
+0 \\
+\frac{1}{m}
+\end{bmatrix}
+F_p(t)
+```
+
+---
+
+### ▶️ 3. Acceleration Feedback
+
+Let:
+
+```math
+F_s(t) = -g_a \ddot{x}(t)
+```
+
+Total force:
+
+```math
+m\ddot{x}(t) + c\dot{x}(t) + kx(t) = F_p(t) + F_s(t) = F_p(t) - g_a \ddot{x}(t)
+```
+
+Move terms to one side:
+
+```math
+(m + g_a)\ddot{x}(t) + c\dot{x}(t) + kx(t) = F_p(t)
+```
+
+Divide by \( m + g_a \):
+
+```math
+\ddot{x}(t) = -\left(\frac{c}{m + g_a}\right) \dot{x}(t) - \left(\frac{k}{m + g_a}\right) x(t) + \left(\frac{1}{m + g_a}\right) F_p(t)
+```
+
+State-space:
+
+```math
+\begin{bmatrix}
+\dot{z}_1(t) \\
+\dot{z}_2(t)
+\end{bmatrix}
+=
+\begin{bmatrix}
+0 & 1 \\
+-\left(\frac{k}{m + g_a}\right) & -\left(\frac{c}{m + g_a}\right)
+\end{bmatrix}
+\begin{bmatrix}
+z_1(t) \\
+z_2(t)
+\end{bmatrix}
++
+\begin{bmatrix}
+0 \\
+\frac{1}{m + g_a}
+\end{bmatrix}
+F_p(t)
+```
+
+---
+
+### ▶️ 4. Combined Feedback (General Case)
+
+If all three feedback gains are active:
+
+```math
+F_s(t) = -g_d x(t) - g_v \dot{x}(t) - g_a \ddot{x}(t)
+```
+
+Modified equation:
+
+```math
+(m + g_a)\ddot{x}(t) + (c + g_v)\dot{x}(t) + (k + g_d)x(t) = F_p(t)
+```
+
+Final state-space form:
+
+```math
+\begin{bmatrix}
+\dot{z}_1(t) \\
+\dot{z}_2(t)
+\end{bmatrix}
+=
+\begin{bmatrix}
+0 & 1 \\
+-\left(\frac{k + g_d}{m + g_a}\right) & -\left(\frac{c + g_v}{m + g_a}\right)
+\end{bmatrix}
+\begin{bmatrix}
+z_1(t) \\
+z_2(t)
+\end{bmatrix}
++
+\begin{bmatrix}
+0 \\
+\frac{1}{m + g_a}
+\end{bmatrix}
+F_p(t)
+```
+
+This general formulation helps analyse the combined impact of all control strategies on the system dynamics.
