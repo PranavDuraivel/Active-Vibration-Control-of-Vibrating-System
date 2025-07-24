@@ -18,13 +18,14 @@ The mechanical system is governed by the classical mass-spring-damper equation:
 m\ddot{x}(t) + c\dot{x}(t) + kx(t) = F_p(t) + F_s(t)
 ```
 
-Where:
+### Where:
 
-- m=5kg
-- c=20Ns/m
-- k=2.2×106 N/m
-- Fp(t) = primary input force
-- Fs(t) = secondary control force
+- **m** = 5 kg  
+- **c** = 20 Ns/m  
+- **k** = 2.2 × 10⁶ N/m  
+- *Fₚ(t)*: primary (external) force  
+- *Fₛ(t)*: secondary (control) force  
+
 
 ---
 
