@@ -42,9 +42,8 @@ G(j\omega) = \frac{1}{- \omega^2 m + j \omega c + k}
 **📊 Plot:**
 <td align="center">
       <img src="figures/figure1.png" width="1000"/><br/>
-      <sub>SPL Bode plot of open-loop system</sub>
 </td>
-
+-  **SPL Bode plot of open-loop system**
 - **Observation**: Resonance at ≈ 105.57 Hz (natural frequency)
 
 ---
