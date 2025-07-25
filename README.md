@@ -41,7 +41,7 @@ G(j\omega) = \frac{1}{- \omega^2 m + j \omega c + k}
 
 **📊 Plot:**
 <td align="center">
-      <img src="figures/figure1.png" width="800"/><br/>
+      <img src="figures/figure1.png"/><br/>
       <sub>SPL Bode plot of open-loop system</sub>
 </td>
 
