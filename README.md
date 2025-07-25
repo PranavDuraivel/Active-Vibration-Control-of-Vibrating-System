@@ -62,22 +62,22 @@ H(j\omega) = g_d + j \omega g_v - \omega^2 g_a
 <table>
   <tr>
     <td align="center">
-      <img src="figures/spl_plot.png" width="500"/><br/>
-      <sub>SPL frequency range covering 5 Hz to 1500 kHz</sub>
+      <img src="figures/figure2.png" width="500"/><br/>
+      <sub>Nyquist plot with acceleration gain</sub>
     </td>
     <td align="center">
-      <img src="figures/displacement_plot.png" width="500"/><br/>
-      <sub>Maximum displacement occurs <150 Hz, controlled at resonance</sub>
+      <img src="figures/figure3.png" width="500"/><br/>
+      <sub>Bode plot with acceleration gain</sub>
     </td>
   </tr>
   <tr>
     <td align="center">
-      <img src="figures/impedance_plot.png" width="500"/><br/>
-      <sub>Peak impedance near resonance (14 Ω), nominal 8 Ω</sub>
+      <img src="figures/figure4.png" width="500"/><br/>
+      <sub>Nyquist plot with velocity gain</sub>
     </td>
     <td align="center">
-      <img src="figures/efficiency_plot.png" width="500"/><br/>
-      <sub>Peaks at 3.5% near 131 Hz, ~1.5% midrange typical for sealed-box driver</sub>
+      <img src="ffigure5.png" width="500"/><br/>
+      <sub>Bode plot with velocity gain</sub>
     </td>
   </tr>
 </table>
