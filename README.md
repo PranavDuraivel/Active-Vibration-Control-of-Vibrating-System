@@ -76,7 +76,7 @@ H(j\omega) = g_d + j \omega g_v - \omega^2 g_a
       <sub>Nyquist plot with velocity gain</sub>
     </td>
     <td align="center">
-      <img src="ffigure5.png" width="500"/><br/>
+      <img src="figures/figure5.png" width="500"/><br/>
       <sub>Bode plot with velocity gain</sub>
     </td>
   </tr>
