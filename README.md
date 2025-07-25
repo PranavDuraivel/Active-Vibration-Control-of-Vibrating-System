@@ -40,7 +40,11 @@ G(j\omega) = \frac{1}{- \omega^2 m + j \omega c + k}
 ```
 
 **📊 Plot:**
-- **Figure 1**: Bode plot of open-loop system  
+<td align="center">
+      <img src="figures/figure1.png" width="800"/><br/>
+      <sub>SPL Bode plot of open-loop system</sub>
+</td>
+
 - **Observation**: Resonance at ≈ 105.57 Hz (natural frequency)
 
 ---
@@ -54,6 +58,29 @@ H(j\omega) = g_d + j \omega g_v - \omega^2 g_a
 ```
 
 **Plots & Interpretation:**
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="figures/spl_plot.png" width="500"/><br/>
+      <sub>SPL frequency range covering 5 Hz to 1500 kHz</sub>
+    </td>
+    <td align="center">
+      <img src="figures/displacement_plot.png" width="500"/><br/>
+      <sub>Maximum displacement occurs <150 Hz, controlled at resonance</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="figures/impedance_plot.png" width="500"/><br/>
+      <sub>Peak impedance near resonance (14 Ω), nominal 8 Ω</sub>
+    </td>
+    <td align="center">
+      <img src="figures/efficiency_plot.png" width="500"/><br/>
+      <sub>Peaks at 3.5% near 131 Hz, ~1.5% midrange typical for sealed-box driver</sub>
+    </td>
+  </tr>
+</table>
 
 - **Figure 2**: Nyquist plot with acceleration gain \( g_a \)  
 - **Figure 3**: Bode plot with acceleration gain  
