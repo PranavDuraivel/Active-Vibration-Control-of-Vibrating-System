@@ -80,14 +80,17 @@ H(j\omega) = g_d + j \omega g_v - \omega^2 g_a
       <sub>Bode plot with velocity gain</sub>
     </td>
   </tr>
-</table>
-
-- **Figure 2**: Nyquist plot with acceleration gain \( g_a \)  
-- **Figure 3**: Bode plot with acceleration gain  
-- **Figure 4**: Nyquist plot with velocity gain \( g_v \)  
-- **Figure 5**: Bode plot with velocity gain  
-- **Figure 6**: Nyquist plot with displacement gain \( g_d \)  
-- **Figure 7**: Bode plot with displacement gain  
+  <tr>
+    <td align="center">
+      <img src="figures/figure6.png" width="500"/><br/>
+      <sub>Nyquist plot with displacement gain</sub>
+    </td>
+    <td align="center">
+      <img src="figures/figure7.png" width="500"/><br/>
+      <sub>Bode plot with displacement gain</sub>
+    </td>
+  </tr>    
+</table> 
 
 > **Observation**:  
 > - \( g_v \) adds damping → Most stable  
